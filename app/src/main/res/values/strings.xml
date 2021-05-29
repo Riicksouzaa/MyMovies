@@ -1,3 +1,6 @@
 <resources>
 	<string name="app_name">My Movies</string>
+	<string name="no_movies_to_show">No movies to show</string>
+	<string name="movie_poster_image">Movie Poster Image</string>
+	<string name="movie_folder">Movie Folder</string>
 </resources>
