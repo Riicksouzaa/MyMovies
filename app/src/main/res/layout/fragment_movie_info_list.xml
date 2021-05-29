@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<androidx.recyclerview.widget.RecyclerView
+			android:id="@+id/movie_info_list_rv"
+			tools:listitem="@layout/view_movie_info_list_item"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:visibility="@{safeUnbox(viewmodel.loading) ? View.GONE : View.VISIBLE}" />
+
+		<ProgressBar
+			style="?android:attr/progressBarStyleLarge"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:visibility="@{safeUnbox(!viewmodel.loading) ? View.GONE : View.VISIBLE}" />
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:text="@string/no_movies_to_show"
+			android:textSize="@dimen/_18sp"
+			android:visibility="@{safeUnbox(viewmodel.empty) ? View.VISIBLE : View.GONE}" />
+	</RelativeLayout>
+
+	<data>
+
+		<import type="android.view.View" />
+
+		<variable
+			name="viewmodel"
+			type="com.rsdev.mymovies.view.ui.movieinfo.MovieInfoViewModel" />
+	</data>
+
+</layout>
