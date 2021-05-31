@@ -32,16 +32,16 @@ class MovieInfoRemoteMediator(
 				val remoteKey = getRemoteKeyClosest(state)
 				remoteKey?.nextKey?.minus(1) ?: MOVIE_FIRST_PAGE
 			}
-			LoadType.APPEND -> {
+			LoadType.PREPEND -> {
 				val remoteKey = getRemoteKeyForFirstItem(state)
-				val nextKey = remoteKey?.nextKey ?: return MediatorResult.Success(
+				val nextKey = remoteKey?.prevKey ?: return MediatorResult.Success(
 					endOfPaginationReached = remoteKey != null
 				)
 				nextKey
 			}
-			LoadType.PREPEND -> {
+			LoadType.APPEND -> {
 				val remoteKey = getRemoteKeyForLastItem(state)
-				val prevKey = remoteKey?.prevKey ?: return MediatorResult.Success(
+				val prevKey = remoteKey?.nextKey ?: return MediatorResult.Success(
 					endOfPaginationReached = remoteKey != null
 				)
 				prevKey

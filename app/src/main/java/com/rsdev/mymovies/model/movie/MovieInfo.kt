@@ -4,7 +4,10 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
-@Entity(tableName = "movieinfo")
+@Entity(
+	tableName = "movieinfo",
+//	indices = [Index(value = ["original_title"], name = "index_original_title", unique = true)]
+)
 data class MovieInfo(
 	@PrimaryKey(autoGenerate = true)
 	val movieId: Long,
