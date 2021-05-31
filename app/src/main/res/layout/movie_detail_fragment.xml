@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools">
+
+	<ScrollView
+		android:layout_width="match_parent"
+		android:background="#151c25"
+		android:layout_height="match_parent">
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:fitsSystemWindows="false">
+
+			<ImageView
+				android:id="@+id/movie_backdrop_image"
+				android:layout_width="match_parent"
+				android:layout_height="300dp"
+				android:contentDescription="@string/movie_folder"
+				android:fitsSystemWindows="true"
+				android:scaleType="centerCrop"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				app:layout_constraintVertical_bias="0.0"
+				tools:srcCompat="@tools:sample/avatars" />
+
+			<ImageView
+				android:id="@+id/gradient_background"
+				android:layout_width="0dp"
+				android:layout_height="0dp"
+				android:src="@drawable/gradient_bg"
+				app:layout_constraintBottom_toBottomOf="@+id/movie_backdrop_image"
+				app:layout_constraintEnd_toEndOf="@+id/movie_backdrop_image"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="@+id/movie_backdrop_image" />
+
+			<ImageView
+				android:id="@+id/movie_detail_image"
+				android:layout_width="125dp"
+				android:layout_height="175dp"
+				android:layout_marginStart="16dp"
+				android:scaleType="centerCrop"
+				android:transitionName="sharedName"
+				app:layout_constraintBottom_toBottomOf="@+id/movie_backdrop_image"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/movie_backdrop_image"
+				tools:srcCompat="@tools:sample/avatars" />
+
+			<TextView
+				android:id="@+id/movie_information"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_marginEnd="16dp"
+				android:layout_marginTop="5dp"
+				android:textColor="#566f9a"
+				android:textSize="12sp"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/movie_title"
+				tools:text="@tools:sample/lorem[1]" />
+
+
+			<TextView
+				android:id="@+id/movie_title"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_marginEnd="16dp"
+				android:layout_marginStart="16dp"
+				android:lineSpacingExtra="8dp"
+				android:textColor="@color/white"
+				android:textSize="18sp"
+				app:layout_constraintBottom_toBottomOf="@+id/movie_detail_image"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toEndOf="@+id/movie_detail_image"
+				app:layout_constraintTop_toTopOf="@+id/movie_detail_image"
+				tools:text="@tools:sample/lorem[6]" />
+
+
+			<TextView
+				android:id="@+id/movie_overview"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginEnd="16dp"
+				android:layout_marginLeft="16dp"
+				android:layout_marginRight="16dp"
+				android:layout_marginStart="16dp"
+				android:layout_marginTop="16dp"
+				android:lineSpacingExtra="8dp"
+				android:textColor="#566f9a"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/movie_detail_image"
+				tools:text="@tools:sample/lorem/random" />
+
+		</androidx.constraintlayout.widget.ConstraintLayout>
+	</ScrollView>
+
+	<data>
+
+		<import type="android.view.View" />
+
+		<variable
+			name="movieDetails"
+			type="com.rsdev.mymovies.view.ui.moviedetails.MovieDetailViewModel" />
+	</data>
+</layout>

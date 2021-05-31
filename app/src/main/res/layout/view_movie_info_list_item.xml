@@ -61,7 +61,7 @@
 
 		<variable
 			name="movieInfo"
-			type="com.rsdev.mymovies.entity.movie.MovieInfo" />
+			type="com.rsdev.mymovies.model.movie.MovieInfo" />
 	</data>
 
 </layout>
