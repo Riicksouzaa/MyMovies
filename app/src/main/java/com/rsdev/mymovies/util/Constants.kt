@@ -1,4 +1,4 @@
-package com.rsdev.mymovies.utils
+package com.rsdev.mymovies.util
 
 class Constants {
 	companion object {
