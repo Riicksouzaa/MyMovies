@@ -1,19 +1,16 @@
 <h1 align="center">My Movies</h1>
 <p align="center">Aplicativo mobile exemplo para listagem de filmes utilizando api do [MovieDB](themoviedb.org)<br></p>
 
-<h1 align="center">
-  <img alt="MyMovie" title="#" src="images/logo2.png" />
-</h1>
-
 ![Badge](https://img.shields.io/github/issues/Riicksouzaa/MyMovies?color=green)
 ![Badge](https://img.shields.io/github/forks/Riicksouzaa/MyMovies)
 ![Badge](https://img.shields.io/github/stars/Riicksouzaa/MyMovies)
 
 ### Features
 
-<img alt="Consus" title="#" src="images/demo1.png" />
-
-<img alt="Consus" title="#" src="images/demo2.png" />
+<div>
+    <img alt="Consus" title="#" src="images/demo1.png" />
+    <img alt="Consus" title="#" src="images/demo2.png" />
+</div>
 
 - [x] Tela Inicial
 - [x] Listagem de Filmes
