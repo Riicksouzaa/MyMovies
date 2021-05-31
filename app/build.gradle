@@ -14,8 +14,8 @@ android {
 		applicationId "com.rsdev.mymovies"
 		minSdkVersion 19
 		targetSdkVersion 30
-		versionCode 3
-		versionName "2.1"
+		versionCode 4
+		versionName "2.2"
 		multiDexEnabled true
 
 		testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
