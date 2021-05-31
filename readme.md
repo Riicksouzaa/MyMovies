@@ -6,9 +6,8 @@
 </h1>
 
 ![Badge](https://img.shields.io/github/issues/Riicksouzaa/MyMovies?color=green)
-![Badge](https://img.shields.io/github/forks/Riicksouzaa/MyMovies
-![Badge](https://img.shields.io/github/stars/Riicksouzaa/MyMovies
-![Badge](https://img.shields.io/apm/l/vim-mode)
+![Badge](https://img.shields.io/github/forks/Riicksouzaa/MyMovies)
+![Badge](https://img.shields.io/github/stars/Riicksouzaa/MyMovies)
 
 ### Features
 
