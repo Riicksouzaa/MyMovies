@@ -6,20 +6,20 @@ import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.rsdev.mymovies.R
-import com.rsdev.mymovies.databinding.ViewMovieInfoListItemBinding
+import com.rsdev.mymovies.databinding.MovieInfoListViewItemBinding
 import com.rsdev.mymovies.view.ui.movieInfo.UiModel
 
 class MovieInfoAdapter : PagingDataAdapter<UiModel, RecyclerView.ViewHolder>(UIMODEL_COMPARATOR) {
 
 	override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
 		val inflater = LayoutInflater.from(parent.context)
-		val dataBinding = ViewMovieInfoListItemBinding.inflate(inflater, parent, false)
+		val dataBinding = MovieInfoListViewItemBinding.inflate(inflater, parent, false)
 		return MovieInfoViewHolder.create(dataBinding)
 	}
 
 	override fun getItemViewType(position: Int): Int {
 		return when (getItem(position)) {
-			is UiModel.MovieInfoItem -> R.layout.view_movie_info_list_item
+			is UiModel.MovieInfoItem -> R.layout.movie_info_list_view_item
 			null -> throw UnsupportedOperationException("Unknown view")
 		}
 	}
