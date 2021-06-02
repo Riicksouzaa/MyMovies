@@ -30,7 +30,7 @@ class MovieRepository(
 	}
 
 	companion object {
-		private const val PAGE_SIZE = 60
+		private const val PAGE_SIZE = 20
 	}
 
 }

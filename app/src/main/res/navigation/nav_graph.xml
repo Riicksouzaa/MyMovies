@@ -8,7 +8,7 @@
 		android:id="@+id/movieInfoFragment"
 		android:name="com.rsdev.mymovies.view.ui.movieInfo.MovieInfoFragment"
 		android:label="Movie List"
-		tools:layout="@layout/fragment_movie_info_list">
+		tools:layout="@layout/movie_info_fragment">
 		<action
 			android:id="@+id/action_movieInfoFragment_to_movieDetailsFragment"
 			app:destination="@id/movieDetailsFragment" />
