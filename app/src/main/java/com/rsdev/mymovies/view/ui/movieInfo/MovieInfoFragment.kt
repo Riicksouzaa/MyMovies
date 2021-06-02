@@ -1,19 +1,19 @@
 package com.rsdev.mymovies.view.ui.movieInfo
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.view.isVisible
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.paging.LoadState
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.rsdev.mymovies.Inject
-import com.rsdev.mymovies.databinding.FragmentMovieInfoListBinding
+import com.rsdev.mymovies.databinding.MovieInfoFragmentBinding
 import com.rsdev.mymovies.view.ui.adapters.movieinfo.MovieInfoAdapter
 import com.rsdev.mymovies.view.ui.adapters.movieinfo.MovieInfoLoadStateAdapter
 import kotlinx.coroutines.Job
@@ -21,7 +21,7 @@ import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
 class MovieInfoFragment : Fragment() {
-	private lateinit var binding: FragmentMovieInfoListBinding
+	private lateinit var binding: MovieInfoFragmentBinding
 	private lateinit var viewModel: MovieInfoViewModel
 	private lateinit var adapter: MovieInfoAdapter
 	private var searchJob: Job? = null
@@ -30,7 +30,7 @@ class MovieInfoFragment : Fragment() {
 		inflater: LayoutInflater, container: ViewGroup?,
 		savedInstanceState: Bundle?
 	): View {
-		binding = FragmentMovieInfoListBinding.inflate(inflater, container, false).apply {
+		binding = MovieInfoFragmentBinding.inflate(inflater, container, false).apply {
 			viewModel = ViewModelProvider(
 				this@MovieInfoFragment,
 				Inject.provideViewModelFactory(activity?.applicationContext!!)
